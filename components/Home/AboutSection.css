@@ -1,0 +1,345 @@
+/* ==========================================================
+   LUXURY ABOUT SECTION - FOREST EMERALD EDITORIAL THEME
+   ========================================================== */
+
+.luxury-about {
+  position: relative;
+  background-color: #041812;
+  padding: 130px 60px;
+  border-bottom: 1px solid rgba(52, 211, 153, 0.15);
+  overflow: hidden;
+}
+
+.luxury-about::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.luxury-about-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* ================= Left Side: Visual Frame ================= */
+
+.about-visual-col {
+  position: relative;
+  width: 100%;
+}
+
+.about-image-frame {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(52, 211, 153, 0.28);
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.7);
+  aspect-ratio: 4 / 5;
+  background: #07271d;
+}
+
+.about-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-image-frame:hover .about-main-img {
+  transform: scale(1.04);
+}
+
+.about-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(4, 24, 18, 0.85) 0%,
+    rgba(4, 24, 18, 0.2) 50%,
+    rgba(4, 24, 18, 0.1) 100%
+  );
+  pointer-events: none;
+}
+
+/* Interactive Play Button on Image */
+.about-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(4, 24, 18, 0.85);
+  border: 1px solid rgba(52, 211, 153, 0.5);
+  border-radius: 50px;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+.about-play-btn:hover {
+  background: #10b981;
+  border-color: #10b981;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.about-play-btn:hover .play-text,
+.about-play-btn:hover .play-icon {
+  color: #041812;
+}
+
+.play-icon {
+  color: #34d399;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.play-text {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+/* Embedded Inline Video when played */
+.about-embedded-video-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background: #000;
+}
+
+.about-inline-video {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close-video-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(4, 24, 18, 0.9);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 5;
+  transition: background 0.2s;
+}
+
+.close-video-btn:hover {
+  background: #10b981;
+  color: #041812;
+}
+
+/* Floating Glassmorphism Badge */
+.about-floating-stat {
+  position: absolute;
+  bottom: -24px;
+  right: -24px;
+  background: rgba(7, 39, 29, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  border-radius: 14px;
+  padding: 24px 28px;
+  max-width: 230px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.65);
+}
+
+.stat-number {
+  display: block;
+  font-family: var(--font-cinzel), serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: #34d399;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  display: block;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #cbd5e1;
+  line-height: 1.4;
+}
+
+/* ================= Right Side: Editorial Content ================= */
+
+.about-tag {
+  display: inline-block;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: #34d399;
+  margin-bottom: 18px;
+  border-bottom: 1px solid rgba(52, 211, 153, 0.3);
+  padding-bottom: 6px;
+}
+
+.about-title {
+  font-family: var(--font-cinzel), serif;
+  font-size: clamp(32px, 3.6vw, 52px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.about-italic {
+  font-style: italic;
+  color: #34d399;
+}
+
+.about-lead {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #f1f5f9;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.about-body {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #94a3b8;
+  margin-bottom: 34px;
+}
+
+/* Key Pillars Grid */
+.about-pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(52, 211, 153, 0.15);
+  border-bottom: 1px solid rgba(52, 211, 153, 0.15);
+  margin-bottom: 34px;
+}
+
+.pillar-item h4 {
+  font-family: var(--font-cinzel), serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.pillar-item p {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #94a3b8;
+}
+
+/* Bottom Metrics Bar */
+.about-metrics {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.metric-box strong {
+  display: block;
+  font-family: var(--font-cinzel), serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #34d399;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.metric-box span {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 12px;
+  color: #cbd5e1;
+  letter-spacing: 0.3px;
+}
+
+.metric-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(52, 211, 153, 0.2);
+}
+
+/* ================= RESPONSIVE MEDIA QUERIES ================= */
+
+@media (max-width: 1024px) {
+  .luxury-about {
+    padding: 90px 40px;
+  }
+  .luxury-about-container {
+    grid-template-columns: 1fr;
+    gap: 65px;
+  }
+  .about-image-frame {
+    max-width: 540px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 11;
+  }
+  .about-floating-stat {
+    right: 20px;
+    bottom: -20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .luxury-about {
+    padding: 70px 20px;
+  }
+  .about-pillars {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .about-metrics {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .metric-divider {
+    display: none;
+  }
+  .about-floating-stat {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    max-width: 100%;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 22px;
+  }
+  .stat-number {
+    margin-bottom: 0;
+    font-size: 32px;
+  }
+}

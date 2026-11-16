@@ -1,0 +1,277 @@
+/* ==========================================================
+   CINEMATIC LUXURY HERO SECTION - FOREST EMERALD THEME
+   ================================================---------- */
+
+.luxury-hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 60px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(52, 211, 153, 0.2);
+  background-color: #041812;
+}
+
+/* Background Video Container & Performance Fixes */
+.hero-video-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-bg-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  /* Deep Forest Gradient with rich vignette for cinematic contrast */
+  background: linear-gradient(
+    135deg, 
+    rgba(4, 24, 18, 0.92) 0%, 
+    rgba(4, 24, 18, 0.75) 50%, 
+    rgba(7, 39, 29, 0.85) 100%
+  );
+  z-index: 2;
+}
+
+/* Grid Layout */
+.luxury-hero-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+
+/* ================= Typography & Content ================= */
+
+.luxury-tag {
+  display: inline-block;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: #34d399;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(52, 211, 153, 0.3);
+  padding-bottom: 6px;
+}
+
+.luxury-title {
+  font-family: var(--font-cinzel), serif;
+  font-size: clamp(38px, 4.8vw, 72px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.08;
+  letter-spacing: -0.5px;
+  margin-bottom: 22px;
+}
+
+.luxury-italic {
+  font-style: italic;
+  color: #34d399;
+}
+
+.luxury-desc {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #cbd5e1;
+  max-width: 540px;
+  margin-bottom: 38px;
+  font-weight: 400;
+}
+
+/* ================= Action Buttons ================= */
+
+.luxury-actions {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.luxury-btn-primary {
+  background-color: #10b981;
+  color: #041812;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+}
+
+.luxury-btn-primary:hover {
+  background-color: #34d399;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(52, 211, 153, 0.4);
+}
+
+.luxury-btn-outline {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffffff;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-btn-outline:hover {
+  border-color: #34d399;
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ================= Editorial Floating Card ================= */
+
+.luxury-visual {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.editorial-card {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(4, 24, 18, 0.75);
+  border: 1px solid rgba(52, 211, 153, 0.28);
+  border-radius: 16px;
+  padding: 36px 30px;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.65), 0 0 20px rgba(52, 211, 153, 0.08);
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+.editorial-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(52, 211, 153, 0.5);
+}
+
+.editorial-badge {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #34d399;
+  margin-bottom: 16px;
+}
+
+.editorial-info h3 {
+  font-family: var(--font-cinzel), serif;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.editorial-info p {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 13.5px;
+  color: #cbd5e1;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+.editorial-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(52, 211, 153, 0.18);
+  padding-top: 20px;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 12px;
+}
+
+.editorial-footer span {
+  color: #94a3b8;
+}
+
+.editorial-footer strong {
+  color: #34d399;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ================= RESPONSIVE MEDIA QUERIES ================= */
+
+@media (max-width: 1024px) {
+  .luxury-hero {
+    padding: 80px 40px;
+  }
+  .luxury-hero-container {
+    grid-template-columns: 1fr;
+    gap: 55px;
+    text-align: center;
+  }
+  .luxury-desc {
+    margin: 0 auto 38px auto;
+  }
+  .luxury-actions {
+    justify-content: center;
+  }
+  .editorial-card {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .luxury-hero {
+    padding: 60px 24px;
+    min-height: auto;
+  }
+  .luxury-title {
+    font-size: clamp(34px, 7.5vw, 48px);
+  }
+  .editorial-card {
+    padding: 28px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .luxury-hero {
+    padding: 50px 16px;
+  }
+  .luxury-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .luxury-btn-primary, 
+  .luxury-btn-outline {
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+  }
+}

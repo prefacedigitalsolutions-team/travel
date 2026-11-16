@@ -1,0 +1,259 @@
+/* Header Container */
+.nav-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(4, 24, 18, 0.35);
+}
+
+/* Top Announcement Bar */
+.top-announcement {
+  background-color: #041812;
+  color: #a7f3d0;
+  font-size: 12px;
+  padding: 7px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(52, 211, 153, 0.15);
+}
+
+.promo-badge {
+  background-color: #10b981;
+  color: #041812;
+  font-weight: 800;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.8px;
+}
+
+.contact-mini {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+/* Main Forest Green Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 60px;
+  background: rgba(7, 39, 29, 0.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+/* Brand Logo */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.svg-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(52, 211, 153, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease;
+}
+
+.brand-logo:hover .svg-icon-box {
+  transform: rotate(45deg);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-size: 21px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.8px;
+  line-height: 1.1;
+}
+
+.brand-highlight {
+  color: #34d399;
+}
+
+.brand-sub {
+  font-size: 9.5px;
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 3px;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #e2e8f0;
+  font-size: 14.5px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  padding: 6px 0;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #34d399;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #34d399;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Right Side Search & CTA */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.quick-search {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  border-radius: 50px;
+  padding: 5px 12px;
+  transition: border-color 0.25s ease;
+}
+
+.quick-search:focus-within {
+  border-color: #34d399;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.quick-search input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 13px;
+  width: 165px;
+  padding: 4px 6px;
+}
+
+.quick-search input::placeholder {
+  color: #94a3b8;
+}
+
+.quick-search button {
+  background: transparent;
+  border: none;
+  color: #34d399;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #10b981;
+  color: #041812;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35);
+  transition: all 0.25s ease;
+}
+
+.cta-button:hover {
+  background-color: #34d399;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 211, 153, 0.5);
+}
+
+.hamburger-btn {
+  display: none;
+  background: rgba(52, 211, 153, 0.15);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  color: #34d399;
+  font-size: 20px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1080px) {
+  .quick-search {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .top-announcement {
+    padding: 6px 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .promo-badge,
+  .contact-mini {
+    display: none;
+  }
+
+  .navbar {
+    padding: 14px 20px;
+    position: relative;
+  }
+
+  .hamburger-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #07271d;
+    flex-direction: column;
+    padding: 24px 20px;
+    gap: 20px;
+    border-bottom: 1px solid rgba(52, 211, 153, 0.25);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}

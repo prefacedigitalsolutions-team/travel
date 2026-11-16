@@ -1,0 +1,264 @@
+/* ==========================================================
+   BOOKING ENQUIRY & CONCIERGE - FOREST EMERALD THEME
+   ========================================================== */
+
+.luxury-enquiry {
+  position: relative;
+  background-color: #041812;
+  padding: 120px 60px;
+  border-bottom: 1px solid rgba(52, 211, 153, 0.15);
+  overflow: hidden;
+}
+
+.luxury-enquiry::after {
+  content: '';
+  position: absolute;
+  bottom: -180px;
+  left: -120px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.luxury-enquiry-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 70px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= Left Column: Concierge Info ================= */
+
+.enquiry-tag {
+  display: inline-block;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: #34d399;
+  margin-bottom: 16px;
+}
+
+.enquiry-title {
+  font-family: var(--font-cinzel), serif;
+  font-size: clamp(32px, 3.6vw, 50px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.enquiry-italic {
+  font-style: italic;
+  color: #34d399;
+}
+
+.enquiry-desc {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-bottom: 38px;
+}
+
+.concierge-details {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(52, 211, 153, 0.18);
+}
+
+.concierge-label {
+  display: block;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #34d399;
+  margin-bottom: 4px;
+}
+
+.concierge-value {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 15.5px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* ================= Right Column: Form Card ================= */
+
+.enquiry-form-card {
+  background: rgba(7, 39, 29, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  border-radius: 16px;
+  padding: 42px 38px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+}
+
+.luxury-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #cbd5e1;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: rgba(4, 24, 18, 0.85);
+  border: 1px solid rgba(52, 211, 153, 0.22);
+  border-radius: 8px;
+  padding: 13px 16px;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #64748b;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #34d399;
+  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.12);
+}
+
+.form-group select option {
+  background-color: #041812;
+  color: #ffffff;
+}
+
+.luxury-submit-btn {
+  margin-top: 6px;
+  background-color: #10b981;
+  color: #041812;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 28px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 12px 28px rgba(16, 185, 129, 0.28);
+}
+
+.luxury-submit-btn:hover {
+  background-color: #34d399;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(52, 211, 153, 0.38);
+}
+
+/* Confirmation State */
+.enquiry-success {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.success-icon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: rgba(52, 211, 153, 0.15);
+  border: 1px solid #34d399;
+  color: #34d399;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.enquiry-success h3 {
+  font-family: var(--font-cinzel), serif;
+  font-size: 26px;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.enquiry-success p {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #cbd5e1;
+  max-width: 420px;
+  margin: 0 auto 28px;
+}
+
+.reset-form-btn {
+  background: transparent;
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  color: #34d399;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.reset-form-btn:hover {
+  background: rgba(52, 211, 153, 0.1);
+}
+
+/* ================= RESPONSIVE MEDIA QUERIES ================= */
+
+@media (max-width: 1024px) {
+  .luxury-enquiry {
+    padding: 90px 40px;
+  }
+  .luxury-enquiry-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 640px) {
+  .luxury-enquiry {
+    padding: 70px 20px;
+  }
+  .enquiry-form-card {
+    padding: 28px 22px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

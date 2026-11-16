@@ -1,0 +1,634 @@
+/* ==========================================================
+   VERDANT TRAILS - ADMIN DASHBOARD (FOREST EMERALD THEME)
+   ========================================================== */
+
+.vt-dash {
+  min-height: 100vh;
+  background-color: #03130e;
+  color: #ffffff;
+  font-family: var(--font-jakarta), sans-serif;
+}
+
+.vt-dash-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(4, 24, 18, 0.92);
+  border-bottom: 1px solid rgba(52, 211, 153, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(14px);
+}
+
+.vt-dash-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.vt-dash-logo {
+  font-family: var(--font-cinzel), serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.vt-dash-logo span {
+  color: #34d399;
+}
+
+.vt-dash-tag {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.vt-dash-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.vt-back-site-btn {
+  font-size: 13px;
+  font-weight: 600;
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  transition: all 0.2s ease;
+}
+
+.vt-back-site-btn:hover {
+  border-color: #34d399;
+  color: #34d399;
+}
+
+.vt-agent-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #e2e8f0;
+  background: rgba(7, 39, 29, 0.8);
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.vt-agent-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 8px #34d399;
+}
+
+.vt-dash-body {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 40px 50px 80px;
+}
+
+.vt-dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.vt-dash-header h1 {
+  font-family: var(--font-cinzel), serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.vt-dash-header p {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.vt-search-input {
+  width: 310px;
+  background: rgba(7, 39, 29, 0.7);
+  border: 1px solid rgba(52, 211, 153, 0.28);
+  border-radius: 8px;
+  padding: 11px 16px;
+  font-size: 13.5px;
+  color: #ffffff;
+  outline: none;
+}
+
+.vt-search-input:focus {
+  border-color: #34d399;
+}
+
+.vt-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.vt-stat-box {
+  background: linear-gradient(145deg, rgba(7, 39, 29, 0.7), rgba(4, 24, 18, 0.95));
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  border-radius: 12px;
+  padding: 22px 24px;
+}
+
+.vt-stat-label {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.vt-stat-num {
+  font-family: var(--font-cinzel), serif;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.vt-stat-num.warn { color: #fbbf24; }
+.vt-stat-num.info { color: #60a5fa; }
+.vt-stat-num.success { color: #34d399; }
+
+.vt-filter-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.vt-tab-btn {
+  background: rgba(7, 39, 29, 0.55);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  color: #94a3b8;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vt-tab-btn.active,
+.vt-tab-btn:hover {
+  background: #10b981;
+  border-color: #10b981;
+  color: #041812;
+}
+
+.vt-table-card {
+  background: rgba(7, 39, 29, 0.5);
+  border: 1px solid rgba(52, 211, 153, 0.22);
+  border-radius: 14px;
+  overflow-x: auto;
+}
+
+.vt-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13.5px;
+}
+
+.vt-table th {
+  background: rgba(4, 24, 18, 0.95);
+  color: #34d399;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.vt-table td {
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(52, 211, 153, 0.1);
+  color: #e2e8f0;
+}
+
+.vt-table tr:hover td {
+  background: rgba(52, 211, 153, 0.03);
+}
+
+.vt-id {
+  display: block;
+  color: #34d399;
+  font-weight: 700;
+}
+
+.vt-date {
+  font-size: 11.5px;
+  color: #64748b;
+}
+
+.vt-client-name {
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.vt-client-sub {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.vt-dest-badge {
+  background: rgba(52, 211, 153, 0.08);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  color: #cbd5e1;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.vt-status-dropdown {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+.vt-status-dropdown.pending-review {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.vt-status-dropdown.proposal-sent {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.vt-status-dropdown.confirmed {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.vt-status-dropdown option {
+  background: #041812;
+  color: #ffffff;
+}
+
+.vt-row-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.vt-inspect-btn {
+  background: rgba(52, 211, 153, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  color: #34d399;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.vt-inspect-btn:hover {
+  background: #10b981;
+  color: #041812;
+}
+
+.vt-del-btn {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.vt-del-btn:hover {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.vt-empty {
+  text-align: center;
+  padding: 36px;
+  color: #64748b;
+}
+
+.vt-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 100;
+}
+
+.vt-modal-box {
+  background: #062119;
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 520px;
+  padding: 30px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8);
+}
+
+.vt-modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(52, 211, 153, 0.18);
+  margin-bottom: 20px;
+}
+
+.vt-modal-eyebrow {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #34d399;
+}
+
+.vt-modal-head h3 {
+  font-family: var(--font-cinzel), serif;
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+.vt-modal-close {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.vt-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.vt-detail-grid span {
+  display: block;
+  font-size: 11px;
+  color: #94a3b8;
+  margin-bottom: 3px;
+}
+
+.vt-detail-grid strong {
+  font-size: 13.5px;
+  color: #ffffff;
+}
+
+.vt-notes-box {
+  background: rgba(4, 24, 18, 0.8);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 24px;
+}
+
+.vt-notes-box span {
+  display: block;
+  font-size: 11px;
+  color: #34d399;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.vt-notes-box p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #cbd5e1;
+}
+
+.vt-modal-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.vt-wa-btn {
+  background: #10b981;
+  color: #041812;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 11px 18px;
+  border-radius: 8px;
+}
+
+.vt-close-btn {
+  background: transparent;
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.vt-logout-btn {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #f87171;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vt-logout-btn:hover {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+
+/* pdf print section start */
+
+
+/* ==========================================================
+   PROFESSIONAL PRINT & PDF EXPORT STYLING
+   ========================================================== */
+@media print {
+  /* 1. Page settings & clean white background */
+  @page {
+    size: A4 landscape; /* Luxury data ke liye landscape layout best rehta hai */
+    margin: 15mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* 2. Hide unwanted UI elements (Navigation, Search, Filters, Actions) */
+  .vt-dash-nav,
+  .vt-search-input,
+  .vt-filter-bar,
+  .vt-row-actions,
+  .vt-logout-btn,
+  .vt-back-site-btn,
+  .vt-stats-row,
+  button,
+  select {
+    display: none !important;
+  }
+
+  /* 3. Dashboard Container adjustments */
+  .vt-dash {
+    background: #ffffff !important;
+    padding: 0 !important;
+  }
+
+  .vt-dash-body {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .vt-dash-header {
+    margin-bottom: 20px !important;
+    border-bottom: 2px solid #111 !important;
+    padding-bottom: 10px !important;
+  }
+
+  .vt-dash-header h1 {
+    font-size: 24px !important;
+    color: #03130e !important;
+  }
+
+  .vt-dash-header p {
+    color: #555555 !important;
+    font-size: 12px !important;
+  }
+
+  /* 4. Professional Table formatting for PDF */
+  .vt-table-card {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  .vt-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  .vt-table th {
+    background-color: #03130e !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    font-size: 11px !important;
+    padding: 10px 12px !important;
+    border: 1px solid #03130e !important;
+  }
+
+  .vt-table td {
+    color: #222222 !important;
+    padding: 10px 12px !important;
+    border-bottom: 1px solid #dddddd !important;
+    font-size: 12px !important;
+  }
+
+  .vt-id {
+    color: #03130e !important;
+    font-weight: bold !important;
+  }
+
+  .vt-client-name {
+    color: #111111 !important;
+    font-weight: bold !important;
+  }
+
+  .vt-client-sub {
+    color: #555555 !important;
+  }
+
+  .vt-dest-badge {
+    background: transparent !important;
+    color: #111111 !important;
+    border: 1px solid #ccc !important;
+    padding: 2px 6px !important;
+    font-weight: 500 !important;
+  }
+
+  /* Print Header Title / Footer metadata */
+  .vt-dash-header::before {
+    content: "VERDANT TRAILS — OFFICIAL CLIENT DOSSIER REPORT";
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #666;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 960px) {
+  .vt-dash-nav,
+  .vt-dash-body {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .vt-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .vt-dash-tag {
+    display: none;
+  }
+  .vt-stats-row,
+  .vt-detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .vt-search-input {
+    width: 100%;
+  }
+}

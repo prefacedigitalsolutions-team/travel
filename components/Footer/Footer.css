@@ -1,0 +1,350 @@
+/* ==========================================================
+   NEXT-GEN ARCHITECTURAL FOOTER - VERDANT TRAILS INDIA
+   ========================================================== */
+
+.vt-footer {
+  position: relative;
+  background: linear-gradient(180deg, #041812 0%, #020c09 100%);
+  color: #94a3b8;
+  padding: 90px 60px 30px;
+  border-top: 1px solid rgba(52, 211, 153, 0.2);
+  overflow: hidden;
+}
+
+/* Ambient Emerald Glow */
+.vt-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #34d399, transparent);
+}
+
+.vt-footer-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= 1. Top Editorial CTA Strip ================= */
+
+.vt-footer-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  background: rgba(7, 39, 29, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  border-radius: 16px;
+  padding: 36px 44px;
+  margin-bottom: 72px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.vt-cta-eyebrow {
+  display: block;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  color: #34d399;
+  margin-bottom: 10px;
+}
+
+.vt-cta-heading {
+  font-family: var(--font-cinzel), serif;
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+}
+
+.vt-cta-heading span {
+  font-style: italic;
+  color: #34d399;
+}
+
+.vt-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.vt-btn-primary {
+  background: #10b981;
+  color: #041812;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.25);
+}
+
+.vt-btn-primary:hover {
+  background: #34d399;
+  transform: translateY(-2px);
+}
+
+.vt-btn-ghost {
+  background: rgba(4, 24, 18, 0.7);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  color: #e2e8f0;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 14px 22px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.vt-btn-ghost:hover {
+  border-color: #34d399;
+  color: #34d399;
+}
+
+/* ================= 2. 4-Column Grid ================= */
+
+.vt-footer-grid {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr 0.85fr 1.15fr;
+  gap: 48px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(52, 211, 153, 0.14);
+}
+
+.vt-logo {
+  font-family: var(--font-cinzel), serif;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.vt-logo span {
+  color: #34d399;
+}
+
+.vt-brand-desc {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #94a3b8;
+  max-width: 350px;
+  margin-bottom: 24px;
+}
+
+.vt-trust-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vt-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #cbd5e1;
+  background: rgba(7, 39, 29, 0.6);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  padding: 8px 14px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.vt-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 8px #34d399;
+}
+
+/* Headings & Links */
+.vt-col-heading {
+  font-family: var(--font-cinzel), serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 22px;
+}
+
+.vt-col-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.vt-col-links a {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 13.5px;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.25s ease, transform 0.25s ease;
+  display: inline-block;
+}
+
+.vt-col-links a:hover {
+  color: #34d399;
+  transform: translateX(4px);
+}
+
+/* Regional Offices */
+.vt-office-block {
+  margin-bottom: 16px;
+}
+
+.vt-office-block strong {
+  display: block;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 3px;
+}
+
+.vt-office-block p {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #94a3b8;
+}
+
+.vt-direct-contact {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(52, 211, 153, 0.14);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.vt-direct-contact a {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #34d399;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.vt-direct-contact a:hover {
+  color: #ffffff;
+}
+
+/* ================= 3. Bottom Strip ================= */
+
+.vt-footer-bottom {
+  padding: 26px 0 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.vt-legal-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.vt-legal-nav a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.vt-legal-nav a:hover {
+  color: #34d399;
+}
+
+.vt-top-link {
+  color: #34d399 !important;
+  font-weight: 700;
+}
+
+/* ================= 4. Architectural Watermark ================= */
+
+.vt-watermark {
+  font-family: var(--font-cinzel), serif;
+  font-size: clamp(38px, 8.8vw, 126px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+  line-height: 0.95;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(52, 211, 153, 0.13);
+  user-select: none;
+  margin-top: 18px;
+  white-space: nowrap;
+}
+
+/* ================= RESPONSIVE MEDIA QUERIES ================= */
+
+@media (max-width: 1080px) {
+  .vt-footer {
+    padding: 70px 36px 28px;
+  }
+  .vt-footer-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+  }
+  .vt-footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .vt-footer {
+    padding: 60px 20px 24px;
+  }
+  .vt-cta-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .vt-btn-primary,
+  .vt-btn-ghost {
+    text-align: center;
+  }
+  .vt-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .vt-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .vt-watermark {
+    font-size: 32px;
+    letter-spacing: 0.05em;
+  }
+}

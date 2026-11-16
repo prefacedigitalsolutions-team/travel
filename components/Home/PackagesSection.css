@@ -1,0 +1,254 @@
+/* ==========================================================
+   POPULAR HOLIDAY PACKAGES - FOREST EMERALD EDITORIAL THEME
+   ========================================================== */
+
+.luxury-packages {
+  position: relative;
+  background-color: #041812;
+  padding: 120px 60px;
+  border-bottom: 1px solid rgba(52, 211, 153, 0.15);
+  overflow: hidden;
+}
+
+.luxury-packages-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ================= Section Header ================= */
+
+.packages-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 60px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(52, 211, 153, 0.15);
+}
+
+.packages-tag {
+  display: inline-block;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: #34d399;
+  margin-bottom: 14px;
+}
+
+.packages-title {
+  font-family: var(--font-cinzel), serif;
+  font-size: clamp(32px, 3.6vw, 50px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+}
+
+.packages-italic {
+  font-style: italic;
+  color: #34d399;
+}
+
+.packages-subtitle {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #94a3b8;
+  max-width: 390px;
+}
+
+/* ================= 3-Card Package Grid ================= */
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.package-card {
+  background: rgba(7, 39, 29, 0.55);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(52, 211, 153, 0.55);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.6),
+              0 0 25px rgba(52, 211, 153, 0.08);
+}
+
+/* Card Image Header */
+.package-img-wrap {
+  position: relative;
+  height: 240px;
+  width: 100%;
+  overflow: hidden;
+  background: #07271d;
+}
+
+.package-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.package-card:hover .package-img {
+  transform: scale(1.06);
+}
+
+.package-img-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(4, 24, 18, 0.9) 0%,
+    rgba(4, 24, 18, 0.15) 55%,
+    rgba(4, 24, 18, 0.35) 100%
+  );
+  pointer-events: none;
+}
+
+.package-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(4, 24, 18, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  color: #34d399;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 5px 11px;
+  border-radius: 4px;
+}
+
+.package-duration {
+  position: absolute;
+  bottom: 14px;
+  left: 16px;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #e2e8f0;
+  letter-spacing: 0.4px;
+}
+
+/* Card Content Body */
+.package-body {
+  padding: 26px 26px 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.package-route {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #34d399;
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+}
+
+.package-card-title {
+  font-family: var(--font-cinzel), serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.package-card-desc {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+/* Card Footer & Pricing */
+.package-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+  border-top: 1px solid rgba(52, 211, 153, 0.15);
+}
+
+.price-label {
+  display: block;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #94a3b8;
+  margin-bottom: 2px;
+}
+
+.price-amount {
+  font-family: var(--font-cinzel), serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.package-btn {
+  background: rgba(52, 211, 153, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  color: #34d399;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+
+.package-btn:hover {
+  background: #10b981;
+  border-color: #10b981;
+  color: #041812;
+}
+
+/* ================= RESPONSIVE MEDIA QUERIES ================= */
+
+@media (max-width: 1080px) {
+  .luxury-packages {
+    padding: 90px 40px;
+  }
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .packages-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 680px) {
+  .luxury-packages {
+    padding: 70px 20px;
+  }
+  .packages-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

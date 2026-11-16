@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌿 Verdant Trails — Luxury Travel & Private Aviation Desk
 
-## Getting Started
+> A high-end bespoke travel enquiry and concierge management system built for luxury expeditions, private charter requests, and VIP client dossiers.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Overview
+**Verdant Trails** is a full-stack web application designed for elite travel management. It features an immersive, motion-driven public-facing frontend for clients to request bespoke journeys, backed by a real-time, secure **Admin Command Desk** for travel architects to manage, track, and process leads seamlessly.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack & Architecture
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **Frontend:**
+* **Framework:** Next.js (App Router, Server & Client Components)
+* **Styling & UI:** Modern CSS, Responsive Layouts, Custom Design System
+* **Animations:** GSAP (GreenSock Animation Platform) & ScrollTrigger for high-end cinematic interactions
+* **State & Real-time:** React Hooks (`useState`, `useEffect`, `useCallback`), Auto-polling sync mechanism
 
-## Learn More
+### **Backend & API:**
+* **Framework:** Next.js API Routes (Serverless endpoints)
+* **Database ODM:** Mongoose (Schema validation, custom ID tracking)
 
-To learn more about Next.js, take a look at the following resources:
+### **Database & Security:**
+* **Database:** MongoDB Atlas (`riyazuddin` database, `enquiries` collection)
+* **Authentication:** Secure Session Storage Authentication Guard (`sessionStorage` verification for admin routes)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Key Features
 
-## Deploy on Vercel
+1. **Bespoke Client Portal:**
+   * Interactive enquiry form with automated ID generation (`LEAD-XXXX`) and precise date-time stamps.
+   * Dynamic service and destination selectors (Himalayan Sanctuaries, Overwater Villas, Private Charters).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Concierge Command Desk (Admin Dashboard):**
+   * **Real-time Synchronization:** Auto-polling background sync keeps dashboard data updated with MongoDB without manual page reloads.
+   * **Advanced Filtering & Search:** Filter by status (*Pending Review*, *Proposal Sent*, *Confirmed*) or search instantly by client name, destination, or Dossier ID.
+   * **Performance Pagination:** Server/Client-side chunking (50 dossiers per page) to ensure high performance even with large datasets.
+   * **Direct Client Actions:** Status toggling, permanent database archiving/deletion, and direct WhatsApp client outreach.
+   * **Professional PDF Export:** Built-in A4 landscape print styles to export clean, formal reports directly from the dashboard.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Robust Database CRUD Operations:**
+   * Full Create, Read, Update, and Delete lifecycle mapped safely to custom string IDs rather than raw database object IDs.
+
+---
+
+## 📁 Project Structure
+
+```text
+travel/
+├── app/
+│   ├── admin/
+│   │   ├── dashboard/       # Admin Command Desk & Table components
+│   │   └── login/           # Admin Security Gate
+│   ├── api/
+│   │   └── enquiries/       # REST API endpoints (GET, POST, PUT, DELETE)
+│   ├── layout.js            # Global Layout
+│   └── page.js              # Public Luxury Landing Page
+├── models/
+│   └── Enquiry.js           # Mongoose Schema definition
+├── lib/
+│   └── mongodb.js           # MongoDB Atlas connection utility
+└── README.md                # Project Documentation
