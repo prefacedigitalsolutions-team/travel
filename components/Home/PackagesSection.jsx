@@ -10,33 +10,33 @@ if (typeof window !== 'undefined') {
 
 const PACKAGES = [
   {
-    id: 'himalayan-crown',
-    badge: 'Signature Expedition',
+    id: 'ladakh-spiti-circuit',
+    badge: 'Signature Yatra',
     duration: '7 Days • 6 Nights',
-    title: 'Himalayan Crown Sanctuary',
-    route: 'New Delhi → Leh → Nubra Valley',
-    desc: 'Private chartered flight into Leh, glass-ceiling mountain lodges, and curated high-altitude monastery access.',
-    price: '₹1,85,000',
+    title: 'Leh–Ladakh & Spiti Grand Circuit',
+    route: 'New Delhi → Leh → Nubra → Pangong',
+    desc: 'Direct morning flight into Leh, heated luxury camps, private SUV transfers, and curated monastery & Khardung La access.',
+    price: '₹64,999',
     image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=900&q=85',
   },
   {
-    id: 'emerald-atoll',
-    badge: 'Private Island',
-    duration: '5 Days • 4 Nights',
-    title: 'Baa Atoll Emerald Overwater',
-    route: 'Mumbai → Malé → Private Seaplane',
-    desc: 'Secluded overwater pool villa with private seaplane transfer, sunset yacht charter, and underwater dining.',
-    price: '₹2,60,000',
+    id: 'kashmir-royal-retreat',
+    badge: 'Heritage Luxury',
+    duration: '6 Days • 5 Nights',
+    title: 'Kashmir Gulmarg & Pahalgam Royal Retreat',
+    route: 'New Delhi / Mumbai → Srinagar → Gulmarg',
+    desc: 'Stay in heritage cedar houseboats on Dal Lake, Gondola Phase-II priority passes, and private valley chauffeur tours.',
+    price: '₹48,500',
     image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=900&q=85',
   },
   {
-    id: 'alpine-express',
-    badge: 'First-Class Rail',
-    duration: '8 Days • 7 Nights',
-    title: 'Swiss Glacier & Alpine Retreat',
-    route: 'Zurich → St. Moritz → Zermatt',
-    desc: 'Panoramic Excellence Class rail journeys through the Alps paired with 5-star thermal spa chalets.',
-    price: '₹3,40,000',
+    id: 'rajasthan-palace-trail',
+    badge: 'Royal Circuit',
+    duration: '6 Days • 5 Nights',
+    title: 'Rajasthan Heritage Palace & Desert Trail',
+    route: 'Jaipur → Jodhpur → Udaipur',
+    desc: 'Royal palace stays, private desert dune dining, Lake Pichola sunset boat cruise, and luxury Volvo/SUV transfers.',
+    price: '₹54,999',
     image: 'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=900&q=85',
   },
 ];
@@ -66,19 +66,18 @@ export default function PackagesSection() {
   return (
     <section id="packages" className="luxury-packages" ref={sectionRef}>
       <div className="luxury-packages-container">
-        
         {/* Section Header */}
         <div className="packages-header package-reveal">
           <div>
             <div className="packages-tag">
-              <span>Curated Expeditions</span>
+              <span>VayuYatra Signature Packages</span>
             </div>
             <h2 className="packages-title">
-              Signature <span className="packages-italic">Journeys.</span>
+              Curated <span className="packages-italic">Bharatiya Yatras.</span>
             </h2>
           </div>
           <p className="packages-subtitle">
-            All-inclusive private itineraries engineered for effortless luxury, customizable to your dates.
+            All-inclusive Indian itineraries with flights, luxury Volvo/SUV transfers, and veg/Jain dining options—customizable from your city.
           </p>
         </div>
 
@@ -100,18 +99,17 @@ export default function PackagesSection() {
 
                 <div className="package-footer">
                   <div className="package-price-box">
-                    <span className="price-label">Starting From</span>
+                    <span className="price-label">Per Person • All-Inclusive</span>
                     <strong className="price-amount">{pkg.price}</strong>
                   </div>
                   <a href="#enquiry" className="package-btn">
-                    Reserve →
+                    Book Yatra →
                   </a>
                 </div>
               </div>
             </article>
           ))}
         </div>
-
       </div>
     </section>
   );

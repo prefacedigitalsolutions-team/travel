@@ -63,10 +63,10 @@ export default function Navbar() {
     <header className="nav-header" ref={navRef}>
       {/* Top Emerald Strip */}
       <div className="top-announcement">
-        <span className="promo-badge">NEW SEASON</span>
-        <p>Explore curated eco-tours & mountain expeditions — Book early & save up to 25%</p>
+        <span className="promo-badge">YATRA SEASON</span>
+        <p>Curated Himalayan expeditions &amp; royal Bharatiya tours — Book early &amp; save up to 25%</p>
         <div className="contact-mini">
-          <span>+91 98765 43210</span>
+          <span>+91-8826113256</span>
         </div>
       </div>
 
@@ -82,18 +82,18 @@ export default function Navbar() {
           </div>
           <div className="brand-text">
             <span className="brand-title">
-              VERDANT <span className="brand-highlight">TRAILS</span>
+              VAYU<span className="brand-highlight">YATRA</span>
             </span>
-            <span className="brand-sub">Preface Communication</span>
+            <span className="brand-sub">India Expeditions &amp; Aviation</span>
           </div>
         </a>
 
         {/* Navigation Links */}
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
           <li className="nav-item"><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
-          <li className="nav-item"><a href="#packages" onClick={() => setMenuOpen(false)}>Expeditions</a></li>
+          <li className="nav-item"><a href="#packages" onClick={() => setMenuOpen(false)}>Yatra Packages</a></li>
           <li className="nav-item"><a href="#destinations" onClick={() => setMenuOpen(false)}>Destinations</a></li>
-          <li className="nav-item"><a href="#reviews" onClick={() => setMenuOpen(false)}>Stories</a></li>
+          <li className="nav-item"><a href="#reviews" onClick={() => setMenuOpen(false)}>Traveller Stories</a></li>
         </ul>
 
         {/* Advanced Quick-Search & CTA */}
@@ -101,7 +101,7 @@ export default function Navbar() {
           <form onSubmit={handleSearch} className="quick-search">
             <input
               type="text"
-              placeholder="Where to? (e.g. Bali, Leh)"
+              placeholder="Where to? (e.g. Leh, Kashmir, Kerala)"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -114,7 +114,7 @@ export default function Navbar() {
           </form>
 
           <a href="#enquiry" className="cta-button">
-            Plan Trip
+            Plan Yatra
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <line x1="5" y1="12" x2="19" y2="12" />
               <polyline points="12 5 19 12 12 19" />

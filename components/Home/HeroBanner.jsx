@@ -29,7 +29,7 @@ export default function HeroBanner() {
       >
         <iframe
           src="https://www.youtube.com/embed/7ifhTIBM80E?autoplay=1&mute=1&loop=1&playlist=7ifhTIBM80E&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&modestbranding=1&playsinline=1"
-          title="Cinematic Background Travel Video"
+          title="VayuYatra India Travel Video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           style={{
             position: 'absolute',
@@ -51,24 +51,24 @@ export default function HeroBanner() {
         {/* Left Side: Editorial Typography */}
         <div className="luxury-content">
           <div className="luxury-tag clean-reveal">
-            <span>Global Aviation • Luxury Expeditions • Private Tours</span>
+            <span>VayuYatra India • Domestic &amp; Global Flights • Royal Yatras</span>
           </div>
 
           <h1 className="luxury-title clean-reveal">
             The Art Of <br />
-            <span className="luxury-italic">Rare Travel.</span>
+            <span className="luxury-italic">Bharatiya Travel.</span>
           </h1>
 
           <p className="luxury-desc clean-reveal">
-            Seamless flight bookings, luxury coach transit, and immersive mountain sanctuaries designed for the modern explorer.
+            Seamless Indian flight bookings, luxury Volvo coach transfers, and heritage mountain retreats crafted for modern Indian travelers.
           </p>
 
           <div className="luxury-actions clean-reveal">
             <a href="#packages" className="luxury-btn-primary">
-              Explore Expeditions
+              Explore Yatra Packages
             </a>
             <a href="#enquiry" className="luxury-btn-outline">
-              Request Concierge
+              Book Concierge
             </a>
           </div>
         </div>
@@ -76,13 +76,13 @@ export default function HeroBanner() {
         {/* Right Side: Clean Minimalist Floating Card */}
         <div className="luxury-visual clean-reveal">
           <div className="editorial-card">
-            <div className="editorial-badge">✈️ Featured Route</div>
+            <div className="editorial-badge">✈️ Featured Indian Route</div>
             <div className="editorial-info">
-              <h3>Himalayan Crown Route</h3>
-              <p>Direct Express Flight + Luxury Lodge • 7 Days</p>
+              <h3>Leh–Ladakh &amp; Spiti Grand Circuit</h3>
+              <p>Direct Delhi Flight + Luxury Camp &amp; Volvo • 7 Days / 6 Nights</p>
               <div className="editorial-footer">
-                <span>Verified IATA Partner</span>
-                <strong>Inquire Now</strong>
+                <span>IATA &amp; Ministry of Tourism Approved</span>
+                <strong>Enquire Now</strong>
               </div>
             </div>
           </div>

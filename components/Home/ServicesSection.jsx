@@ -11,31 +11,31 @@ if (typeof window !== 'undefined') {
 const SERVICES = [
   {
     number: '01',
-    tag: 'Global Aviation',
-    title: 'Private Charters & First-Class Ticketing',
-    desc: 'Direct IATA-accredited commercial flight desk alongside private jet and helicopter charters for seamless access to remote airfields.',
-    highlight: 'Priority Lounge & Fast-Track',
+    tag: 'VayuYatra Aviation',
+    title: 'Domestic & Global Flights + Heli Charters',
+    desc: 'Direct IATA-accredited flight bookings from major Indian hubs alongside private jet and helicopter charters for high-altitude and remote destinations.',
+    highlight: 'Airport Lounge & Priority Check-In',
   },
   {
     number: '02',
-    tag: 'Curated Stays',
-    title: 'Mountain & Coastal Sanctuaries',
-    desc: 'Handpicked heritage estates, glass-walled Himalayan lodges, and private island villas vetted for absolute seclusion and service.',
-    highlight: 'Complimentary Suite Upgrades',
+    tag: 'Heritage & Retreats',
+    title: 'Palaces, Houseboats & Himalayan Sanctuaries',
+    desc: 'Handpicked heritage havelis, Dal Lake houseboats, luxury camps, and eco-resorts across India vetted for comfort, safety, and warm hospitality.',
+    highlight: 'Complimentary Room & Meal Upgrades',
   },
   {
     number: '03',
-    tag: 'Ground Mobility',
-    title: 'Executive Coach & Chauffeur Transit',
-    desc: 'Custom-configured luxury sprinter coaches and all-terrain SUVs driven by route-certified local expedition specialists.',
-    highlight: 'Door-to-Door Luggage Handling',
+    tag: 'Pan-India Transit',
+    title: 'Luxury Volvo Coaches & All-Terrain SUVs',
+    desc: 'Well-maintained luxury Volvo coaches, tempo travellers, and mountain-ready SUVs driven by experienced local drivers across highways and ghat roads.',
+    highlight: 'Door-to-Door Pickup & Luggage Care',
   },
   {
     number: '04',
-    tag: 'Bespoke Design',
-    title: 'Tailor-Made Expedition Architecture',
-    desc: 'End-to-end itinerary engineering including permits, private museum access, culinary experiences, and 24/7 on-ground concierge.',
-    highlight: 'Dedicated Travel Architect',
+    tag: 'End-to-End Yatra Design',
+    title: 'Custom Itineraries, Permits & Satvik Dining',
+    desc: 'Complete planning including Inner Line / mountain permits, temple darshan & sightseeing coordination, Pure Veg/Jain meal options, and 24/7 India support.',
+    highlight: 'Dedicated Indian Yatra Specialist',
   },
 ];
 
@@ -64,20 +64,19 @@ export default function ServicesSection() {
   return (
     <section id="services" className="luxury-services" ref={sectionRef}>
       <div className="luxury-services-container">
-        
         {/* Editorial Section Header */}
         <div className="services-header service-reveal">
           <div className="services-header-left">
             <div className="services-tag">
-              <span>Bespoke Capabilities</span>
+              <span>VayuYatra India Capabilities</span>
             </div>
             <h2 className="services-title">
               Curated Pillars Of <br />
-              <span className="services-italic">Seamless Transit.</span>
+              <span className="services-italic">Effortless Bharat Travel.</span>
             </h2>
           </div>
           <p className="services-subtitle">
-            Every element of your journey—from tarmac to mountain ridge—is orchestrated under one roof with zero friction.
+            From flight tickets and mountain permits to luxury coaches and family-friendly stays, every detail is handled seamlessly under one roof.
           </p>
         </div>
 
@@ -102,7 +101,6 @@ export default function ServicesSection() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

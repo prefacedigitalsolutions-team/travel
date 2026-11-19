@@ -8,14 +8,14 @@ export default function Footer() {
         {/* Top Editorial CTA Banner */}
         <div className="vt-footer-cta">
           <div className="vt-cta-text">
-            <span className="vt-cta-eyebrow">Private Travel Desk • New Delhi & Mumbai</span>
+            <span className="vt-cta-eyebrow">VayuYatra India Desk • New Delhi &amp; Mumbai</span>
             <h3 className="vt-cta-heading">
-              Ready to script your next <span>extraordinary expedition?</span>
+              Ready to plan your next <span>Bharatiya royal yatra?</span>
             </h3>
           </div>
           <div className="vt-cta-actions">
             <a href="#enquiry" className="vt-btn-primary">
-              Plan Bespoke Journey →
+              Plan Custom Yatra →
             </a>
             <a href="https://wa.me/919811044720" target="_blank" rel="noopener noreferrer" className="vt-btn-ghost">
               WhatsApp Concierge
@@ -29,10 +29,10 @@ export default function Footer() {
           {/* Column 1: Brand & Indian Credentials */}
           <div className="vt-col-brand">
             <a href="#home" className="vt-logo">
-              VERDANT <span>TRAILS</span>
+              VAYU<span>YATRA</span>
             </a>
             <p className="vt-brand-desc">
-              India’s premier bespoke travel & private aviation house. Curating royal heritage palaces, high-altitude Himalayan sanctuaries, and private island charters across the subcontinent and beyond.
+              India’s premier bespoke travel &amp; aviation house. Curating royal heritage palaces, high-altitude Himalayan sanctuaries, Char Dham heli-yatras, and luxury Volvo/SUV tours across Bharat and beyond.
             </p>
             <div className="vt-trust-badges">
               <div className="vt-badge">
@@ -41,32 +41,32 @@ export default function Footer() {
               </div>
               <div className="vt-badge">
                 <span className="vt-badge-dot"></span>
-                IATA & IATO Member
+                IATA &amp; IATO Accredited
               </div>
             </div>
           </div>
 
-          {/* Column 2: Curated Indian & Global Trails */}
+          {/* Column 2: Curated Indian Circuits */}
           <div className="vt-col-links">
-            <h4 className="vt-col-heading">Curated Circuits</h4>
+            <h4 className="vt-col-heading">Signature Yatra Circuits</h4>
             <ul>
-              <li><a href="#packages">Leh, Ladakh & Nubra Heli-Trail</a></li>
-              <li><a href="#packages">Udaipur & Jodhpur Royal Palaces</a></li>
-              <li><a href="#packages">Kerala Backwaters Private Yacht</a></li>
-              <li><a href="#packages">Andaman Emerald Archipelago</a></li>
-              <li><a href="#packages">Kashmir & Gulmarg Alpine Chalets</a></li>
+              <li><a href="#packages">Leh–Ladakh &amp; Spiti Grand Circuit</a></li>
+              <li><a href="#packages">Kashmir Gulmarg &amp; Pahalgam Retreat</a></li>
+              <li><a href="#packages">Rajasthan Heritage Palace &amp; Desert Trail</a></li>
+              <li><a href="#packages">Kerala Backwaters &amp; Munnar Escape</a></li>
+              <li><a href="#packages">Char Dham Heli-Yatra VIP Package</a></li>
             </ul>
           </div>
 
           {/* Column 3: Company & Desk */}
           <div className="vt-col-links">
-            <h4 className="vt-col-heading">The House</h4>
+            <h4 className="vt-col-heading">VayuYatra House</h4>
             <ul>
               <li><a href="#home">Home</a></li>
-              <li><a href="#about">Heritage & Philosophy</a></li>
-              <li><a href="#services">Aviation & Chauffeur Fleet</a></li>
-              <li><a href="#packages">Signature Expeditions</a></li>
-              <li><a href="#enquiry">Corporate & HNI Desk</a></li>
+              <li><a href="#about">Heritage &amp; Philosophy</a></li>
+              <li><a href="#services">Aviation &amp; Volvo Fleet</a></li>
+              <li><a href="#packages">Yatra Packages</a></li>
+              <li><a href="#enquiry">Family, Group &amp; Corporate Desk</a></li>
             </ul>
           </div>
 
@@ -80,13 +80,13 @@ export default function Footer() {
             </div>
 
             <div className="vt-office-block">
-              <strong>Mumbai Salon</strong>
+              <strong>Mumbai Lounge</strong>
               <p>Level 14, One BKC, Bandra Kurla Complex, Mumbai 400051</p>
             </div>
 
             <div className="vt-direct-contact">
-              <a href="tel:+911140897720">+91 (11) 4089-7720</a>
-              <a href="mailto:concierge@verdanttrails.in">concierge@verdanttrails.in</a>
+              <a href="tel:+911140897720">+91-8826113256</a>
+              <a href="mailto:concierge@vayuyatra.in">concierge@vayuyatra.in</a>
             </div>
           </div>
 
@@ -95,19 +95,19 @@ export default function Footer() {
         {/* Bottom Legal & GST Strip */}
         <div className="vt-footer-bottom">
           <div className="vt-copyright">
-            <span>© {new Date().getFullYear()} Verdant Trails Expeditions Pvt. Ltd. (CIN: U63040DL2018PTC334912)</span>
+            <span>© {new Date().getFullYear()} VayuYatra India Expeditions Pvt. Ltd. (CIN: U63040DL2018PTC334912)</span>
           </div>
           <div className="vt-legal-nav">
             <a href="#enquiry">Privacy Policy</a>
-            <a href="#enquiry">Cancellation & Refund</a>
-            <a href="#enquiry">Guest Charter Terms</a>
+            <a href="#enquiry">Cancellation &amp; Refund Policy</a>
+            <a href="#enquiry">Yatri Terms &amp; GST Info</a>
             <a href="#home" className="vt-top-link">Top ↑</a>
           </div>
         </div>
 
         {/* Oversized Modern Brand Watermark */}
         <div className="vt-watermark" aria-hidden="true">
-          VERDANT TRAILS
+          VAYUYATRA INDIA
         </div>
 
       </div>
