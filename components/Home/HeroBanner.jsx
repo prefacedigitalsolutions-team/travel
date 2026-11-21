@@ -60,7 +60,7 @@ export default function HeroBanner() {
           </h1>
 
           <p className="luxury-desc clean-reveal">
-            Seamless Indian flight bookings, luxury Volvo coach transfers, and heritage mountain retreats crafted for modern Indian travelers.
+           Seamless flights, luxury Volvo transfers, and mountain retreats for modern Indian travelers.
           </p>
 
           <div className="luxury-actions clean-reveal">
