@@ -223,55 +223,163 @@
   letter-spacing: 0.5px;
 }
 
+
 /* ================= RESPONSIVE MEDIA QUERIES ================= */
 
 @media (max-width: 1024px) {
   .luxury-hero {
-    padding: 80px 40px;
+    padding: 72px 32px;
   }
+
+  .hero-video-container {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-bg-video {
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    transform: none;
+    object-fit: cover;
+    object-position: center top;
+  }
+
   .luxury-hero-container {
     grid-template-columns: 1fr;
-    gap: 55px;
-    text-align: center;
+    gap: 44px;
+    text-align: left;
   }
+
   .luxury-desc {
-    margin: 0 auto 38px auto;
+    margin: 0 0 32px 0;
   }
+
   .luxury-actions {
-    justify-content: center;
+    justify-content: flex-start;
   }
+
   .editorial-card {
-    max-width: 440px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
   }
 }
 
 @media (max-width: 768px) {
   .luxury-hero {
-    padding: 60px 24px;
+    align-items: flex-start;
+    padding: 28px 18px 44px;
     min-height: auto;
   }
-  .luxury-title {
-    font-size: clamp(34px, 7.5vw, 48px);
+
+  .hero-bg-video {
+    object-position: center 15%;
   }
+
+  .luxury-hero-container {
+    gap: 28px;
+    text-align: left;
+  }
+
+  .luxury-tag {
+    font-size: 9.5px;
+    letter-spacing: 1.8px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .luxury-title {
+    font-size: clamp(28px, 7vw, 38px);
+    line-height: 1.12;
+    margin-bottom: 12px;
+    text-align: left;
+  }
+
+  .luxury-desc {
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin: 0 0 22px 0;
+    text-align: left;
+  }
+
+  .luxury-actions {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .luxury-btn-primary,
+  .luxury-btn-outline {
+    padding: 10px 18px;
+    font-size: 12.5px;
+    border-radius: 6px;
+  }
+
   .editorial-card {
-    padding: 28px 22px;
+    padding: 20px 18px;
+    border-radius: 12px;
+    text-align: left;
+  }
+
+  .editorial-badge {
+    margin-bottom: 10px;
+    font-size: 9.5px;
+  }
+
+  .editorial-info h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .editorial-info p {
+    font-size: 12.5px;
+    line-height: 1.45;
+    margin-bottom: 16px;
+  }
+
+  .editorial-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding-top: 14px;
+    text-align: left;
   }
 }
 
 @media (max-width: 480px) {
   .luxury-hero {
-    padding: 50px 16px;
+    padding: 22px 14px 36px;
   }
+
+  .luxury-title {
+    font-size: 27px;
+  }
+
+  .luxury-desc {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
   .luxury-actions {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
-    gap: 12px;
+    gap: 8px;
   }
-  .luxury-btn-primary, 
+
+  .luxury-btn-primary,
   .luxury-btn-outline {
-    width: 100%;
+    width: auto;
+    flex: 1 1 auto;
+    box-sizing: border-box;
     text-align: center;
-    padding: 14px 20px;
+    padding: 9px 14px;
+    font-size: 12px;
   }
 }

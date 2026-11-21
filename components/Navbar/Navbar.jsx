@@ -64,7 +64,7 @@ export default function Navbar() {
       {/* Top Emerald Strip */}
       <div className="top-announcement">
         <span className="promo-badge">YATRA SEASON</span>
-        <p>Curated Himalayan expeditions &amp; royal Bharatiya tours — Book early &amp; save up to 25%</p>
+        <p>Himalayan expeditions &amp; royal Bharatiya tours — Save up to 25%</p>
         <div className="contact-mini">
           <span>+91-8826113256</span>
         </div>

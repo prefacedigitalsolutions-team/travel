@@ -52,7 +52,7 @@ export default function AboutSection() {
                   aria-label="Play Yatra Preview Reel"
                 >
                   <span className="play-icon">▶</span>
-                  <span className="play-text">Watch Yatra Reel</span>
+                  <span className="play-text">Watch Reel</span>
                 </button>
               </>
             ) : (

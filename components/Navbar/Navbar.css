@@ -217,10 +217,13 @@
     display: none;
   }
 }
-
 @media (max-width: 850px) {
   .top-announcement {
-    padding: 6px 20px;
+    padding: 5px 14px;
+    min-height: 0;
+    height: auto;
+    font-size: 10.5px;
+    line-height: 1.2;
     justify-content: center;
     text-align: center;
   }
@@ -231,29 +234,164 @@
   }
 
   .navbar {
-    padding: 14px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 14px;
+    min-height: 54px;
+    height: auto;
+    gap: 8px;
     position: relative;
   }
 
-  .hamburger-btn {
-    display: block;
+  /* Logo left side & vertically centered */
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    gap: 9px;
+    margin: 0 auto 0 0;
+    padding: 0;
+    flex-shrink: 0;
   }
 
+  .svg-icon-box {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    margin: 0;
+  }
+
+  .brand-text {
+    justify-content: center;
+  }
+
+  .brand-title {
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  .brand-sub {
+    font-size: 8px;
+    letter-spacing: 1.2px;
+    margin-top: 2px;
+    line-height: 1.1;
+  }
+
+  /* CTA + Toggle button right side & vertically centered with logo */
+  .nav-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    justify-content: flex-end;
+    gap: 7px;
+    margin: 0 0 0 auto;
+    padding: 0;
+    flex-shrink: 0;
+  }
+
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-size: 11.5px;
+    line-height: 1;
+    padding: 7px 11px;
+    white-space: nowrap;
+  }
+
+  .hamburger-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 6px 9px;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  /* Compact dropdown menu without extra bottom height */
   .nav-links {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
+    box-sizing: border-box;
+    height: auto;
+    max-height: 75vh;
+    overflow-y: auto;
     background-color: #07271d;
     flex-direction: column;
-    padding: 24px 20px;
-    gap: 20px;
+    align-items: stretch;
+    margin: 0;
+    padding: 6px 16px 8px;
+    gap: 0;
     border-bottom: 1px solid rgba(52, 211, 153, 0.25);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
   }
 
   .nav-links.open {
     display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 10px 4px;
+    font-size: 14.5px;
+    line-height: 1.3;
+    border-bottom: 1px solid rgba(52, 211, 153, 0.12);
+  }
+
+  .nav-links li:last-child a {
+    border-bottom: none;
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+}
+
+@media (max-width: 390px) {
+  .navbar {
+    padding: 8px 12px;
+    min-height: 50px;
+  }
+
+  .brand-sub {
+    display: none;
+  }
+
+  .svg-icon-box {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-title {
+    font-size: 15px;
+  }
+
+  .nav-actions {
+    gap: 6px;
+  }
+
+  .cta-button {
+    font-size: 11px;
+    padding: 6px 9px;
+  }
+
+  .hamburger-btn {
+    padding: 6px 8px;
+    font-size: 17px;
   }
 }

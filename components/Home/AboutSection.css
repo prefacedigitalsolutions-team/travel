@@ -291,55 +291,207 @@
   background: rgba(52, 211, 153, 0.2);
 }
 
-/* ================= RESPONSIVE MEDIA QUERIES ================= */
+
+
+
 
 @media (max-width: 1024px) {
   .luxury-about {
-    padding: 90px 40px;
+    padding: 84px 36px;
   }
+
   .luxury-about-container {
     grid-template-columns: 1fr;
-    gap: 65px;
+    gap: 48px;
   }
+
+  .luxury-about-container > *,
+  .about-pillars > *,
+  .about-metrics > * {
+    min-width: 0;
+  }
+
   .about-image-frame {
-    max-width: 540px;
+    max-width: 560px;
     margin: 0 auto;
     aspect-ratio: 16 / 11;
   }
+
   .about-floating-stat {
     right: 20px;
     bottom: -20px;
+    padding: 20px 24px;
   }
 }
 
 @media (max-width: 640px) {
   .luxury-about {
-    padding: 70px 20px;
+    padding: 52px 16px;
   }
-  .about-pillars {
-    grid-template-columns: 1fr;
-    gap: 18px;
+
+  .luxury-about-container {
+    gap: 28px;
   }
-  .about-metrics {
-    flex-wrap: wrap;
-    gap: 24px;
+
+  .about-image-frame {
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
   }
-  .metric-divider {
-    display: none;
-  }
+
+  /* Floating / Highlight Stat Card on Mobile */
   .about-floating-stat {
     position: relative;
     right: auto;
     bottom: auto;
     max-width: 100%;
-    margin-top: 16px;
+    margin-top: 14px;
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 18px 22px;
+    gap: 14px;
+    padding: 14px 15px;
+    border-radius: 12px;
+    background: rgba(7, 39, 29, 0.85);
+    border: 1px solid rgba(52, 211, 153, 0.3);
+    box-sizing: border-box;
   }
+
   .stat-number {
     margin-bottom: 0;
-    font-size: 32px;
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #34d399;
+    font-variant-numeric: tabular-nums;
+    flex-shrink: 0;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #cbd5e1;
+  }
+
+  .about-title {
+    font-size: clamp(25px, 6.8vw, 42px);
+    line-height: 1.15;
+  }
+
+  .about-pillars {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 16px 0;
+    margin-bottom: 22px;
+  }
+
+  /* Bottom Counter Metrics Design */
+  .about-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .metric-divider {
+    display: none;
+  }
+
+  .metric-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(7, 39, 29, 0.55);
+    border: 1px solid rgba(52, 211, 153, 0.16);
+    box-sizing: border-box;
+  }
+
+  .metric-box strong {
+    font-size: 25px;
+    line-height: 1.15;
+    margin-bottom: 4px;
+    letter-spacing: -0.02em;
+    color: #34d399;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .metric-box span {
+    font-size: 11px;
+    line-height: 1.35;
+    color: #cbd5e1;
+  }
+}
+
+@media (max-width: 390px) {
+  .luxury-about {
+    padding: 44px 14px;
+  }
+
+  .about-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .metric-box strong {
+    font-size: 20px;
+  }
+}
+
+/* buttons set */
+@media (max-width: 1024px) {
+  .about-play-btn {
+    padding: 11px 20px;
+    gap: 9px;
+  }
+
+  .play-icon {
+    width: 22px;
+    height: 22px;
+    font-size: 10.5px;
+    padding-left: 1.5px;
+  }
+
+  .play-text {
+    font-size: 11.5px;
+    letter-spacing: 1.2px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-play-btn {
+    padding: 9px 15px;
+    gap: 8px;
+  }
+
+  .play-icon {
+    width: 19px;
+    height: 19px;
+    font-size: 9.5px;
+    padding-left: 1.5px;
+  }
+
+  .play-text {
+    font-size: 10.5px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 390px) {
+  .about-play-btn {
+    padding: 8px 12px;
+    gap: 6px;
+  }
+
+  .play-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 9px;
+  }
+
+  .play-text {
+    font-size: 10px;
+    letter-spacing: 0.8px;
   }
 }
