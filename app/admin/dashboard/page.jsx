@@ -167,8 +167,7 @@ export default function AdminDashboard() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-        </div>
-
+        </div>  
         <div className="vt-stats-row">
           <div className="vt-stat-box">
             <span className="vt-stat-label">Total Enquiries</span>
