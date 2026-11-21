@@ -11,12 +11,12 @@ export default function AdminDashboard() {
   const [filter, setFilter] = useState('All');
   const [search, setSearch] = useState('');
   const [activeLead, setActiveLead] = useState(null);
-  
-  // Pagination States (50 leads per page for performance)
+
+  // Pagination States (50 enquiries per page)
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 50;
 
-  // Function to fetch leads from MongoDB API
+  // Fetch enquiries from MongoDB API
   const fetchLeads = useCallback(async () => {
     try {
       const res = await fetch('/api/enquiries');
@@ -29,7 +29,7 @@ export default function AdminDashboard() {
     }
   }, []);
 
-  // Security Guard & Real-time Auto Polling (Every 4 seconds)
+  // Auth Guard & Live Auto Polling (Every 4 seconds)
   useEffect(() => {
     const isAuth = sessionStorage.getItem('vt_admin_auth');
     if (!isAuth) {
@@ -38,7 +38,6 @@ export default function AdminDashboard() {
       setIsAuthenticated(true);
       fetchLeads();
 
-      // Background live polling to keep data synchronized without manual refresh
       const interval = setInterval(() => {
         fetchLeads();
       }, 4000);
@@ -47,17 +46,16 @@ export default function AdminDashboard() {
     }
   }, [router, fetchLeads]);
 
-  // Reset pagination to page 1 when search or filter changes
+  // Reset to page 1 when search or filter changes
   useEffect(() => {
     setCurrentPage(1);
   }, [search, filter]);
 
-  // Jab tak authentication check ho rahi hai, screen clean dark rahegi
   if (!isAuthenticated) {
     return <div style={{ minHeight: '100vh', backgroundColor: '#03130e' }} />;
   }
 
-  // Handle Status Update via Backend PUT API
+  // Update enquiry status via PUT API
   const handleStatusChange = async (id, newStatus) => {
     try {
       const res = await fetch(`/api/enquiries/${id}`, {
@@ -71,16 +69,16 @@ export default function AdminDashboard() {
           prevLeads.map((item) => (item.id === id ? { ...item, status: newStatus } : item))
         );
       } else {
-        alert('Failed to update status: ' + data.error);
+        alert('Could not update status: ' + data.error);
       }
     } catch (error) {
       console.error('Error updating status:', error);
     }
   };
 
-  // Handle Delete via Backend DELETE API
+  // Delete enquiry via DELETE API
   const handleDelete = async (id) => {
-    if (!confirm('Are you sure you want to permanently delete this dossier?')) return;
+    if (!confirm('Are you sure you want to delete this enquiry?')) return;
 
     try {
       const res = await fetch(`/api/enquiries/${id}`, {
@@ -93,7 +91,7 @@ export default function AdminDashboard() {
           setActiveLead(null);
         }
       } else {
-        alert('Failed to delete: ' + data.error);
+        alert('Could not delete enquiry: ' + data.error);
       }
     } catch (error) {
       console.error('Error deleting enquiry:', error);
@@ -105,12 +103,11 @@ export default function AdminDashboard() {
     router.replace('/admin/login');
   };
 
-  // Print / Save as PDF handler
   const handlePrintPDF = () => {
     window.print();
   };
 
-  // Filter and Search logic
+  // Filter and Search
   const filteredLeads = leads.filter((lead) => {
     const matchesStatus = filter === 'All' || lead.status === filter;
     const matchesSearch =
@@ -120,7 +117,7 @@ export default function AdminDashboard() {
     return matchesStatus && matchesSearch;
   });
 
-  // Pagination Logic
+  // Pagination
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentLeads = filteredLeads.slice(indexOfFirstItem, indexOfLastItem);
@@ -131,25 +128,25 @@ export default function AdminDashboard() {
       <header className="vt-dash-nav">
         <div className="vt-dash-brand">
           <span className="vt-dash-logo">
-            VERDANT <span>TRAILS</span>
+            VAYUYATRA <span>INDIA</span>
           </span>
-          <span className="vt-dash-tag">Concierge Command Desk (MongoDB Live)</span>
+          <span className="vt-dash-tag">Flights • Volvo • Yatra Desk</span>
         </div>
 
         <div className="vt-dash-right">
           <Link href="/" className="vt-back-site-btn">
             ← View Live Website
           </Link>
-          
-          {/* Print / Save PDF Button */}
+
           <button onClick={handlePrintPDF} className="vt-logout-btn" style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)' }}>
             🖨️ Save PDF
           </button>
 
           <div className="vt-agent-pill">
             <span className="vt-agent-dot"></span>
-            Senior Architect
+            Travel Desk Admin
           </div>
+
           <button onClick={handleLogout} className="vt-logout-btn">
             Logout ⎋
           </button>
@@ -159,14 +156,14 @@ export default function AdminDashboard() {
       <main className="vt-dash-body">
         <div className="vt-dash-header">
           <div>
-            <h1>Client Enquiries & Dossiers</h1>
-            <p>Manage incoming bespoke travel requests and charter manifests in real time from MongoDB.</p>
+            <h1>Customer Enquiries &amp; Bookings</h1>
+            <p>Manage Indian flight bookings, Volvo transfers, and holiday package enquiries in real time.</p>
           </div>
 
           <input
             type="text"
             className="vt-search-input"
-            placeholder="Search client, ID, or destination..."
+            placeholder="Search traveller, ID, or route..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -174,7 +171,7 @@ export default function AdminDashboard() {
 
         <div className="vt-stats-row">
           <div className="vt-stat-box">
-            <span className="vt-stat-label">Total Dossiers</span>
+            <span className="vt-stat-label">Total Enquiries</span>
             <strong className="vt-stat-num">{leads.length}</strong>
           </div>
           <div className="vt-stat-box">
@@ -184,13 +181,13 @@ export default function AdminDashboard() {
             </strong>
           </div>
           <div className="vt-stat-box">
-            <span className="vt-stat-label">Proposals Sent</span>
+            <span className="vt-stat-label">Quotes Sent</span>
             <strong className="vt-stat-num info">
               {leads.filter((l) => l.status === 'Proposal Sent').length}
             </strong>
           </div>
           <div className="vt-stat-box">
-            <span className="vt-stat-label">Confirmed Charters</span>
+            <span className="vt-stat-label">Confirmed Trips</span>
             <strong className="vt-stat-num success">
               {leads.filter((l) => l.status === 'Confirmed').length}
             </strong>
@@ -213,12 +210,12 @@ export default function AdminDashboard() {
           <table className="vt-table">
             <thead>
               <tr>
-                <th>Dossier ID</th>
-                <th>Client Information</th>
-                <th>Expedition / Service</th>
-                <th>Party Size</th>
+                <th>Booking ID</th>
+                <th>Customer Details</th>
+                <th>Route / Package</th>
+                <th>Travellers</th>
                 <th>Status</th>
-                <th>Manage</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -263,7 +260,7 @@ export default function AdminDashboard() {
                         <button
                           className="vt-del-btn"
                           onClick={() => handleDelete(lead.id)}
-                          title="Archive Lead"
+                          title="Delete Enquiry"
                         >
                           ✕
                         </button>
@@ -274,14 +271,13 @@ export default function AdminDashboard() {
               ) : (
                 <tr>
                   <td colSpan="6" className="vt-empty">
-                    No client enquiries match your current filter or database is empty.
+                    No customer enquiries found for this filter or search.
                   </td>
                 </tr>
               )}
             </tbody>
           </table>
 
-          {/* Pagination Controls */}
           {totalPages > 1 && (
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px 24px', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
               <span style={{ color: '#8a9992', fontSize: '13px' }}>
@@ -330,7 +326,7 @@ export default function AdminDashboard() {
           <div className="vt-modal-box" onClick={(e) => e.stopPropagation()}>
             <div className="vt-modal-head">
               <div>
-                <span className="vt-modal-eyebrow">Client Travel Dossier</span>
+                <span className="vt-modal-eyebrow">Customer Trip Details</span>
                 <h3>{activeLead.id} — {activeLead.name}</h3>
               </div>
               <button className="vt-modal-close" onClick={() => setActiveLead(null)}>
@@ -349,32 +345,32 @@ export default function AdminDashboard() {
                   <strong>{activeLead.email}</strong>
                 </div>
                 <div>
-                  <span>Selected Expedition</span>
+                  <span>Selected Route / Package</span>
                   <strong>{activeLead.destination}</strong>
                 </div>
-                <div>    
-                  <span>Party Size</span>
+                <div>
+                  <span>Travellers</span>
                   <strong>{activeLead.guests}</strong>
                 </div>
               </div>
 
               <div className="vt-notes-box">
-                <span>Preferred Dates & Concierge Notes</span>
-                <p>{activeLead.notes || 'No special notes provided by client.'}</p>
+                <span>Travel Dates &amp; Notes</span>
+                <p>{activeLead.notes || 'No extra notes provided by customer.'}</p>
               </div>
             </div>
 
-            <div className="vt-modal-foot"> 
+            <div className="vt-modal-foot">
               <a
                 href={`https://wa.me/${activeLead.phone ? activeLead.phone.replace(/[^0-9]/g, '') : ''}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="vt-wa-btn"
               >
-                Message on WhatsApp →
+                Chat on WhatsApp →
               </a>
               <button className="vt-close-btn" onClick={() => setActiveLead(null)}>
-                Done
+                Close
               </button>
             </div>
           </div>
